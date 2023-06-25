@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Date;
 import java.util.List;
 
 import entities.Department;
@@ -33,6 +34,12 @@ public class Program {
 		for(Seller s : sellers) {
 			System.out.println(s);
 		}
+		System.out.println();
+		
+		System.out.println("==TESTE4== Insert()");
+		seller = new Seller(null,"Pedro","pedruco.zandona@gmail.com",new Date(), 4000.00,departmente);
+		sellerDao.insert(seller);
+		System.out.println("New Seller ID:"+seller.getId());
 
 	}
 
