@@ -40,6 +40,17 @@ public class Program {
 		seller = new Seller(null,"Pedro","pedruco.zandona@gmail.com",new Date(), 4000.00,departmente);
 		sellerDao.insert(seller);
 		System.out.println("New Seller ID:"+seller.getId());
+		
+		System.out.println();
+		System.out.println("==TESTE5== UPDATE()");
+		/*seller = new Seller(6,"Maria","maria@gmail.com",new Date(), 3500.00,departmente);
+		sellerDao.update(seller);
+		System.out.println(seller);*/
+		
+		seller = sellerDao.findById(6);
+		seller.setName("Maria Zandoná");
+		sellerDao.update(seller);
+		System.out.println(seller);
 
 	}
 
